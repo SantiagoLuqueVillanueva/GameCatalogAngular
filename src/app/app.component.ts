@@ -66,6 +66,7 @@ export class AppComponent implements OnInit {
   onPageSizeChange(pageSizeChange: string): void {
     let pageSizeNumber = Number(pageSizeChange);
     this.pageSize = pageSizeNumber;
+    this.currentPage = 1;
     this.loadGames();
   }
 
