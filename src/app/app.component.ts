@@ -63,6 +63,12 @@ export class AppComponent implements OnInit {
     this.loadGames();
   }
 
+  onPageSizeChange(pageSizeChange: string): void {
+    let pageSizeNumber = Number(pageSizeChange);
+    this.pageSize = pageSizeNumber;
+    this.loadGames();
+  }
+
   searchByTitle(text: string): void {
     this.gameService.searchGames(text).subscribe(data => {
       this.games = data;

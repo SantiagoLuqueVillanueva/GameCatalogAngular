@@ -42,6 +42,15 @@
 
       <button (click)="filterByPrice(minPrice.value, maxPrice.value)">Filtrar</button>
     </div>
+
+    <div class="filtro">
+      <label>Páginas:</label>
+      <select #pageSelect (change)="onPageSizeChange(pageSelect.value)">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+      </select>
+    </div>
   </section>
 
   <section class="lista">
